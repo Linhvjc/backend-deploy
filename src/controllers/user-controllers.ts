@@ -35,9 +35,11 @@ export const userSignup = async (
 
     // create token and store cookie
     res.clearCookie(COOKIE_NAME, {
-      httpOnly: false,
+      httpOnly: true,
       signed: true,
       path: "/",
+      secure: false,
+      sameSite: "lax"
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
@@ -46,8 +48,10 @@ export const userSignup = async (
     res.cookie(COOKIE_NAME, token, {
       path: "/",
       expires,
-      httpOnly: false,
+      httpOnly: true,
       signed: true,
+      secure: false,
+      sameSite: "lax"
     });
 
     return res
@@ -79,9 +83,11 @@ export const userLogin = async (
     // create token and store cookie
 
     res.clearCookie(COOKIE_NAME, {
-      httpOnly: false,
+      httpOnly: true,
       signed: true,
       path: "/",
+      secure: false,
+      sameSite: "lax"
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
@@ -90,8 +96,10 @@ export const userLogin = async (
     res.cookie(COOKIE_NAME, token, {
       path: "/",
       expires,
-      httpOnly: false,
+      httpOnly: true,
       signed: true,
+      secure: false,
+      sameSite: "lax"
     });
 
     return res
@@ -142,9 +150,11 @@ export const userLogout = async (
     }
 
     res.clearCookie(COOKIE_NAME, {
-      httpOnly: false,
+      httpOnly: true,
       signed: true,
       path: "/",
+      secure: false,
+      sameSite: "lax"
     });
 
     return res
