@@ -8,8 +8,8 @@ config();
 const app = express();
 
 //middlewares
-app.use(cors()); // Allow all origins
-app.options("*", cors()); // Enable preflight requests for all routes
+app.use(cors({ origin: "https://legal-helper.vercel.app", credentials: true }));
+// app.use(cors({ origin: "http://localhost:8000", credentials: true }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
