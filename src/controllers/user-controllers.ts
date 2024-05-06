@@ -38,7 +38,7 @@ export const userSignup = async (
       httpOnly: true,
       signed: true,
       path: "/",
-      secure: true,
+      // secure: true,
       sameSite: "none"
     });
 
@@ -50,7 +50,7 @@ export const userSignup = async (
       expires,
       httpOnly: true,
       signed: true,
-      secure: true,
+      // secure: true,
       sameSite: "none"
     });
 
@@ -86,7 +86,7 @@ export const userLogin = async (
       httpOnly: true,
       signed: true,
       path: "/",
-      secure: true,
+      // secure: true,
       sameSite: "none"
     });
 
@@ -98,7 +98,7 @@ export const userLogin = async (
       expires,
       httpOnly: true,
       signed: true,
-      secure: true,
+      // secure: true,
       sameSite: "none"
     });
 
@@ -153,7 +153,7 @@ export const userLogout = async (
       httpOnly: true,
       signed: true,
       path: "/",
-      secure: true,
+      // secure: true,
       sameSite: "none"
     });
 
