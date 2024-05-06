@@ -1,6 +1,6 @@
 import axios from 'axios';
 const instance = axios.default.create({
-  baseURL: 'http://127.0.0.1:8000'
+  baseURL: 'https://0ad7-167-179-48-114.ngrok-free.app/'
 });
 
 export const getResponse = async (chats, message) => {
